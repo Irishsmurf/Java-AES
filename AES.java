@@ -22,7 +22,8 @@ public class AES {
     return sb.toString();
   }
 
-  public static BigInteger mod_pow(BigInteger base, BigInteger exponent, BigInteger modulus) {
+  public static BigInteger mod_pow(BigInteger base, BigInteger exponent, 
+                                   BigInteger modulus) {
     BigInteger answer = new BigInteger("1");
     BigInteger zero = new BigInteger("0");
     while (exponent.compareTo(zero) == 1) {
@@ -102,7 +103,11 @@ public class AES {
     //Message
     byte[] zeros = new byte[]{5, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     //Randomly Generated Private Key
-    String privString = "6567FE9F51472ADC1A13FC89083505C2866175FDBB781AC7C996D1D52358FD1A5F274454441621E915F9FA491AD02EBAD140494AC1CB965990C08C7922675BBD6B13DC1EDA52BB194E05AC10A97D3E7B24AD0BE1A32B16F89A17378DADDE5F3F5264E65889710E0BE925CC529F19886014A7360ECEAFA4C4BFF5A89CAE28CB1";
+    String privString = "6567FE9F51472ADC1A13FC89083505C2866175FDBB781AC7C996" +
+                        "D1D52358FD1A5F274454441621E915F9FA491AD02EBAD140494A" +
+                        "C1CB965990C08C7922675BBD6B13DC1EDA52BB194E05AC10A97D" +
+                        "3E7B24AD0BE1A32B16F89A17378DADDE5F3F5264E65889710E0B" +
+                        "E925CC529F19886014A7360ECEAFA4C4BFF5A89CAE28CB1";
 
     //Convert strings to BigIntegers
     BigInteger p = new BigInteger(hexString, 16);
