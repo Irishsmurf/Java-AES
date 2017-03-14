@@ -13,8 +13,7 @@ import java.security.*;
 import java.util.*;
 import javax.xml.bind.DatatypeConverter;
 
-public class AES
-{
+public class AES {
   public static String toHex(byte[] bytes) {
     StringBuilder sb = new StringBuilder(bytes.length);
     for (byte b: bytes ) {
